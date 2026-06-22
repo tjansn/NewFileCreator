@@ -1,0 +1,28 @@
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# Build products
+*.app
+*.appex
+*.dSYM
+*.ipa
+*.pkg
+*.zip
+media/frames/
+
+# Swift
+.build/
+Packages/
+Package.resolved
+
+# Local editor files
+.idea/
+.vscode/
+*.swp

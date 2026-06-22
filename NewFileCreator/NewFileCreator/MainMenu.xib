@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="NewFileCreator" customModuleProvider="target">
+            <connections>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="NewFileCreator" id="1Xt-HY-uBw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="NewFileCreator" systemMenu="apple" id="uQy-DD-JDr">
+                        <items>
+                            <menuItem title="About NewFileCreator" id="5kV-Vb-QxS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                            <menuItem title="Extension Settings…" id="ext-set-001">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                <keyEquivalent key=","/>
+                                <connections>
+                                    <action selector="openExtensionSettings:" target="Voe-Tx-rLC" id="ext-act-001"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                            <menuItem title="Quit NewFileCreator" keyEquivalent="q" id="4sb-4s-VLi">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="TesOsT-F8A"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="New File Creator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <rect key="contentRect" x="196" y="240" width="400" height="200"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="txt-001">
+                        <rect key="frame" x="20" y="140" width="360" height="40"/>
+                        <textFieldCell key="cell" lineBreakMode="wordWrapping" title="New File Creator" id="txt-cell-001">
+                            <font key="font" metaFont="systemBold" size="24"/>
+                            <color key="textColor" name="labelColor" catalog="System"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="txt-002">
+                        <rect key="frame" x="20" y="80" width="360" height="50"/>
+                        <textFieldCell key="cell" lineBreakMode="wordWrapping" title="This app adds a 'New File' option to Finder's right-click context menu. Enable the extension in System Settings → Privacy &amp; Security → Extensions → Finder Extensions." id="txt-cell-002">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="secondaryLabelColor" catalog="System"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="btn-001">
+                        <rect key="frame" x="125" y="20" width="150" height="32"/>
+                        <buttonCell key="cell" type="push" title="Open Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="btn-cell-001">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="openExtensionSettings:" target="Voe-Tx-rLC" id="btn-act-001"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="txt-001" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="con-001"/>
+                    <constraint firstItem="txt-001" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="con-002"/>
+                    <constraint firstItem="txt-002" firstAttribute="top" secondItem="txt-001" secondAttribute="bottom" constant="10" id="con-003"/>
+                    <constraint firstItem="txt-002" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="con-004"/>
+                    <constraint firstAttribute="trailing" secondItem="txt-002" secondAttribute="trailing" constant="20" id="con-005"/>
+                    <constraint firstItem="btn-001" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="con-006"/>
+                    <constraint firstItem="btn-001" firstAttribute="bottom" secondItem="EiT-Mj-1SZ" secondAttribute="bottom" constant="-20" id="con-007"/>
+                </constraints>
+            </view>
+        </window>
+    </objects>
+</document>
